@@ -1,12 +1,7 @@
 module.exports = {
-    swcMinify: true,
-    async redirects() {
-        return [
-          {
-            source: '/blog',
-            destination: '/',
-            permanent: true,
-          },
-        ]
-      },
+  swcMinify: true,
+  i18n: {
+    locales: ["fa", "en"],
+    defaultLocale: "en",
+  },
 };
