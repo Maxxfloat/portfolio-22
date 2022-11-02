@@ -1,0 +1,31 @@
+{
+  "homePage": {
+    "currentPage": "Home",
+    "desc": "I'm a web developer who love to code",
+    "hero": {
+      "title": "Hi, I'm Omid and Serious",
+      "description": {
+        "1": "I enjoy",
+        "2": "coding",
+        "3": "and",
+        "4": "building",
+        "5": "web apps"
+      },
+      "scrollLink": "More"
+    },
+    "projects": {
+      "title": "Here are a few of my favorite projects.",
+      "link": "View all"
+    }
+  },
+  "projectsPage": {
+    "currentPage": "Projects",
+    "desc": "I like coding using tools like React, NextJS, Tailwind, and many more! Here are some of my favorite projects.",
+
+    "heading": {
+      "title": "Projects built with",
+      "noTitle": "Projects",
+      "description": "I've built apps using anything HTML, CSS, JS, React, NextJS and more tools, some of my favorite projects"
+    }
+  }
+}
