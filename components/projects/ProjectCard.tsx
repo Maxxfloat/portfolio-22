@@ -2,11 +2,15 @@ import React from "react";
 import Image from "next/image";
 import { kebabCase } from "@/utils/utils";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import useDir from "hooks/useDir";
 
 function ProjectCard({ project }) {
+  const { locale } = useRouter();
   return (
     <div
-      className="max-w-sm mx-auto flex flex-col projects-center md:projects-start md:justify-center"
+      className={`flex flex-col max-w-sm md:projects-start mx-auto projects-center 
+       md:justify-center`}
       key={project.id}
     >
       <a
@@ -14,15 +18,16 @@ function ProjectCard({ project }) {
         target="_blank"
         className={`w-full relative rounded-xl border-fun-gray border p-2 transition hover:-translate-y-2 hover:opacity-75 hover:border-fun-pink will-change-projectCard`}
       >
-        <img
-          className="w-full rounded-md"
-          src={project.img}
-        />
+        <img className="w-full rounded-md" src={project.img} />
       </a>
       <div className="w-full mt-5">
-        <div className="flex projects-center justify-between">
+        <div
+          className={`flex justify-between projects-center
+           ${locale == "fa" ? "flex-row-reverse" : "flex-row"}
+          `}
+        >
           <a href={project.link || project.github} target="_blank">
-            <h3 className="text-lg font-bold">{project.title}</h3>
+            <h3 className="text-lg font-bold">{project.title[locale]}</h3>
           </a>
           <div className="space-x-2">
             {project.link && (
@@ -47,13 +52,21 @@ function ProjectCard({ project }) {
             )}
           </div>
         </div>
-        <p className="text-fun-gray text-left text-sm">{project.desc}</p>
-        <ul className="flex flex-wrap items-center mt-2 -ml-2 list-none">
-          {project.tags.map((tag, index) => {
+        <p
+          className={`text-sm text-fun-gray ${
+            locale == "fa" ? "text-right" : "text-left"
+          }`}
+          dir={useDir()}
+        >
+          {project.desc[locale]}
+        </p>
+        <ul className={`flex flex-wrap items-center t-2 -ml-2 list-none`}>
+          {project.tags.map((tag: string) => {
+            console.log("tag", tag);
             return (
               <li key={tag}>
                 <Link href={`/projects/tag/${kebabCase(tag)}`}>
-                  <div className="m-1 rounded-lg text-sm bg-fun-pink-dark py-1 px-2 cursor-pointer hover:opacity-75">
+                  <div className="px-2 py-1 m-1 text-sm rounded-lg cursor-pointer bg-fun-pink-dark hover:opacity-75">
                     {tag}
                   </div>
                 </Link>
