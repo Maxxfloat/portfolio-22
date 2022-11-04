@@ -23,30 +23,6 @@ body::-webkit-scrollbar-thumb {
   border-radius: 10px;
 }
 
-.landingSectionTitle::before {
-  content: "";
-  position: absolute;
-  left: 105%;
-  right: 0px;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 4px;
-  width: 100vw;
-  @apply bg-fun-pink;
-}
-
-@media (max-width: 768px) {
-  .landingSectionTitle::before {
-    left: 50%;
-    right: auto;
-    top: -20px;
-    transform: translate(-50%, -50%);
-    height: 8px;
-    width: 150px;
-    @apply bg-fun-pink;
-  }
-}
-
 /* Mobile Nav */
 
 .burger {
@@ -96,7 +72,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .menuRendered li {
-  @apply border-gray-600 w-full;
+  @apply w-full border-gray-600;
   transform: translateX(0);
   opacity: 1;
 }
@@ -127,11 +103,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 .prose h2 {
-  @apply text-white font-bold text-3xl mb-2 mt-8;
+  @apply mt-8 mb-2 text-3xl font-bold text-white;
 }
 
 .prose a {
-  @apply text-fun-pink underline;
+  @apply underline text-fun-pink;
 }
 .prose .anchor {
   @apply absolute invisible;
@@ -161,7 +137,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .prose h2 {
-  @apply inline-block pb-1 pr-3 mb-6 w-auto border-b-4 border-fun-pink;
+  @apply inline-block w-auto pb-1 pr-3 mb-6 border-b-4 border-fun-pink;
 }
 
 .blogSignature {
@@ -242,7 +218,7 @@ pre[class*="language-"] {
 }
 
 pre[class*="language-"] {
-  @apply px-5 py-3 border border-t-0 rounded-b-lg text-gray-200 border-fun-gray-darker overflow-x-scroll;
+  @apply px-5 py-3 overflow-x-scroll text-gray-200 border border-t-0 rounded-b-lg border-fun-gray-darker;
 }
 
 pre::-webkit-scrollbar {
@@ -255,7 +231,7 @@ pre {
 /* }
 
 .rehype-code-title {
-  @apply px-5 py-3 font-monospace text-sm font-bold border border-b-0 rounded-t-lg text-gray-200 border-fun-gray-darker bg-fun-gray-darkest;
+  @apply px-5 py-3 text-sm font-bold text-gray-200 border border-b-0 rounded-t-lg font-monospace border-fun-gray-darker bg-fun-gray-darkest;
 }
 
 .rehype-code-title + pre {
@@ -263,7 +239,7 @@ pre {
 }
 
 .highlight-line {
-  @apply block px-4 -mx-4 border-l-4 border-blue-500 bg-gray-800;
+  @apply block px-4 -mx-4 bg-gray-800 border-l-4 border-blue-500;
 } */
 
 /* --------------------------------------------------------- */
