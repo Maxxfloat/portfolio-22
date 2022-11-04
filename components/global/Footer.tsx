@@ -3,7 +3,6 @@ import React, { FC } from "react";
 import { Column as ColumnType, pages, social } from "@/data/global";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { useTranslations } from "next-intl";
 
 const Column: FC<{ item: ColumnType }> = ({ item }) => {
   return (
