@@ -3,7 +3,7 @@
     "currentPage": "Home",
     "desc": "I'm a web developer who love to code",
     "hero": {
-      "title": "Hi, I'm Omid and Serious",
+      "title": "Hi, I'm Omid",
       "description": {
         "1": "I enjoy",
         "2": "coding",
@@ -27,5 +27,16 @@
       "noTitle": "Projects",
       "description": "I've built apps using anything HTML, CSS, JS, React, NextJS and more tools, some of my favorite projects"
     }
+  },
+  "skillPage": {
+    "title": "I got the experience",
+    "subtitle": "Here is my toolbelt for success"
+  },
+  "personalAttributes": {
+    "sectionTitle": "The way I know myself"
+  },
+  "about": {
+    "title": "Me",
+    "description": "web developer by React. I started coding in high school, and the first language I learned was c++, I chose the web because it is easy to use and accessible on every device. I see a bright future for web apps and want to be part of this future. Likewise, I started learning the required skills through online courses. After a few months of practice and several training projects, I worked with other developers (junior and senior) to get teamwork experience. Now I am looking to work remotely or locally with a creative and ethical team in the role of React Developer"
   }
 }
