@@ -52,12 +52,7 @@ function ProjectCard({ project }) {
             )}
           </div>
         </div>
-        <p
-          className={`text-sm text-fun-gray ${
-            locale == "fa" ? "text-right" : "text-left"
-          }`}
-          dir={useDir()}
-        >
+        <p className={`text-sm text-fun-gray text-justify my-2`} dir={useDir()}>
           {project.desc[locale]}
         </p>
         <ul className={`flex flex-wrap items-center t-2 -ml-2 list-none`}>
