@@ -1,18 +1,26 @@
-import React from 'react'
+import { useRouter } from "next/router";
+import React from "react";
 
 type SectionTitleProps = {
   title: string;
-}
+};
 
-function SectionTitle({title}: SectionTitleProps) {
-    return (
-        
-      <div className="overflow-x-hidden w-full pt-5">
-        <h2 className="landingSectionTitle max-w-sm md:max-w-max mx-auto md:mx-0 text-center md:text-left relative text-3xl font-bold mb-10 pt-4 md:pt-0 md:w-max">
-          {title}
-        </h2>
+function SectionTitle({ title }: SectionTitleProps) {
+  const { locale } = useRouter();
+  return (
+    <div className="w-full pt-5">
+      <div
+        className={`${
+          locale == "fa"
+            ? "md:flex-row-reverse md:text-right"
+            : "md:flex-row md:text-left"
+        } flex items-center text-center justify-center h-24 gap-8`}
+      >
+        <span className="text-3xl font-bold whitespace-nowrap">{title}</span>
+        <div className="hidden w-full h-2 bg-[#00ffff] -z-10 md:block" />
       </div>
-    )
+    </div>
+  );
 }
 
-export default SectionTitle
+export default SectionTitle;
