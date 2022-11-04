@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 
 import Link from "next/link";
-import {routes} from "@/data/global";
+import { routes } from "@/data/global";
 import useDelayedRender from "use-delayed-render";
+import TranslationBtn from "./TranslationBtn";
+import NavbarTitle from "./NavbarTitle";
 
 export default function MobileNavbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,20 +35,16 @@ export default function MobileNavbar() {
   return (
     <nav>
       <div
-        className={`w-full justify-between flex items-center ${isMenuRendered && 'bg-bg'} p-5`}
+        className={`w-full justify-between flex items-center ${
+          isMenuRendered && "bg-bg"
+        } p-5`}
         style={{ zIndex: 101 }}
       >
-        <li className="list-none font-bold text-lg">
-          <Link href="/">
-            <img
-              className="mr-3"
-              src="/static/logos/logo_full.svg"
-              width="160"
-            />
-          </Link>
+        <li className="text-lg font-bold list-none ">
+          <NavbarTitle />
         </li>
         <button
-          className="burger visible md:hidden"
+          className="visible burger md:hidden"
           aria-label="Toggle menu"
           type="button"
           onClick={toggleMenu}
@@ -60,14 +58,15 @@ export default function MobileNavbar() {
           className={`menu flex flex-col absolute bg-bg
             ${isMenuRendered && "menuRendered"}`}
         >
+          <TranslationBtn />
           {routes.map((item, index) => {
             return (
               <li
-                className="border-b border-gray-900 text-gray-100 text-sm font-semibold"
+                className="text-sm font-semibold text-gray-100 border-b border-gray-900"
                 style={{ transitionDelay: `${150 + index * 25}ms` }}
               >
-                <Link href={item.path}>
-                  <a className="flex w-auto pb-4">{item.title}</a>
+                <Link href={item.path} className="flex w-auto pb-4">
+                  {item.title}
                 </Link>
               </li>
             );
@@ -81,7 +80,7 @@ export default function MobileNavbar() {
 function MenuIcon(props) {
   return (
     <svg
-      className="h-5 w-5 absolute text-gray-100"
+      className="absolute w-5 h-5 text-gray-100"
       width="20"
       height="20"
       viewBox="0 0 20 20"
@@ -109,7 +108,7 @@ function MenuIcon(props) {
 function CrossIcon(props) {
   return (
     <svg
-      className="h-5 w-5 absolute text-gray-100"
+      className="absolute w-5 h-5 text-gray-100"
       viewBox="0 0 24 24"
       width="24"
       height="24"
