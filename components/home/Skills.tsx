@@ -1,5 +1,5 @@
 import React from "react";
-import { skills } from "@/data/global";
+import skills from "@/data/skills";
 import { useTranslations } from "next-intl";
 import { useRouter } from "next/router";
 

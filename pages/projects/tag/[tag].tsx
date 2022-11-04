@@ -1,7 +1,7 @@
 import Page from "components/utility/Page";
 
 import { GetStaticProps, GetStaticPaths } from "next";
-import { projects } from "@/data/global";
+import projects from "@/data/projects";
 
 import { kebabCase, kebabArray } from "@/utils/utils";
 import Projects from "components/projects/Projects";

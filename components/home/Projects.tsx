@@ -5,7 +5,7 @@ import SectionTitle from "../global/SectionTitle";
 import ProjectCard from "../projects/ProjectCard";
 import { useTranslations } from "next-intl";
 import { Project } from "types";
-import { projects } from "@/data/global";
+import projects from "@/data/projects";
 
 function Projects() {
   const t = useTranslations("homePage.projects");

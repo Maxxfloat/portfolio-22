@@ -1,6 +1,6 @@
 import React from "react";
 import SectionTitle from "../global/SectionTitle";
-import { personalAttributes } from "@/data/global";
+import personalAttributes from "@/data/personalAtrributes";
 import { useRouter } from "next/router";
 import { useTranslations } from "next-intl";
 import useDir from "hooks/useDir";

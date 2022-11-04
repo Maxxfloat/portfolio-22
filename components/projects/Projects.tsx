@@ -1,4 +1,4 @@
-import { projects } from "@/data/global";
+import projects from "@/data/projects";
 import React from "react";
 import { Project } from "types";
 import ProjectCard from "./ProjectCard";
