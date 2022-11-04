@@ -1,87 +1,59 @@
 import Link from "next/link";
-import React from "react";
-import { footer } from "@/data/global";
+import React, { FC } from "react";
+import { Column as ColumnType, pages, social } from "@/data/global";
 import Image from "next/image";
+import { useRouter } from "next/router";
+import { useTranslations } from "next-intl";
 
-function Footer() {
+const Column: FC<{ item: ColumnType }> = ({ item }) => {
   return (
-    <footer className="flex flex-col w-screen px-5 py-10 border-t border-fun-pink-darker z-5 bg-bg">
-      <div className="w-full max-w-4xl m-auto grid grid-cols-2 sm:grid-cols-3 justify-between items-start">
-        {footer.columns.map((item, index) => {
+    <div className="mb-5 text-left sm:mb-0">
+      <h4 className="text-sm font-bold uppercase text-fun-gray">
+        {item.title}
+      </h4>
+      <div>
+        {item.links.map((item, index) => {
           return (
-            <div key={index} className="text-left mb-5 sm:mb-0">
-              <h4 className="uppercase text-fun-gray text-sm font-bold">
-                {item.title}
-              </h4>
-              <div>
-                {item.links.map((item, index) => {
-                  return (
-                    <div key={index} className="my-4">
-                      {item.leavesWebsite ? (
-                        <a
-                          href={item.link}
-                          target="_blank"
-                          className="items-center flex"
-                        >
-                          {item.icon && (
-                            <span className="pr-2 -mb-1">
-                              <Image src={item.icon} width={20} height={20} />
-                            </span>
-                          )}
-                          {item.name}
-                        </a>
-                      ) : (
-                        <Link href={item.link}>{item.name}</Link>
-                      )}
-                    </div>
-                  );
-                })}
-              </div>
+            <div key={index} className="my-4">
+              {item.leavesWebsite ? (
+                <a
+                  href={item.link}
+                  target="_blank"
+                  className="flex items-center"
+                >
+                  {item.icon && (
+                    <span className="pr-2 -mb-1">
+                      <Image src={item.icon} alt="" width={20} height={20} />
+                    </span>
+                  )}
+                  {item.name}
+                </a>
+              ) : (
+                <Link href={item.link}>{item.name}</Link>
+              )}
             </div>
           );
         })}
-        <div className="text-center col-span-2 sm:col-auto sm:text-left pt-8 sm:mt-0 sm:pt-0 text-fun-gray border-t border-fun-pink-dark sm:border-0">
-          <h4 className="uppercase text-fun-gray text-sm font-bold">
-            Support My Work
-          </h4>
-          <div className="space-y-2 mt-4 w-full flex items-center sm:items-start flex-col">
-            {footer.support.buymeacoffee !== "" && (
-              <div>
-                <a
-                  href={`https://buymeacoffee.com/${footer.support.buymeacoffee}`}
-                  target="_blank"
-                >
-                  <img
-                    src="/static/misc/buy-me-a-coffee.svg"
-                    className="h-12 mr-2 hover:opacity-80 opacity-100 transition-opacity"
-                  />
-                </a>
-              </div>
-            )}
-            {footer.support.paypal !== "" && (
-              <div>
-                <a
-                  href={`https://paypal.me/${footer.support.paypal}`}
-                  target="_blank"
-                >
-                  <img
-                    src="/static/misc/paypal.svg"
-                    className="h-12 mr-2 hover:opacity-80 opacity-100 transition-opacity"
-                  />
-                </a>
-              </div>
-            )}
-            <p className="text-fun-gray text-xs pt-1">
-              {footer.support.message}
-            </p>
-          </div>
-        </div>
       </div>
-      <div className="max-w-4xl w-full m-auto mt-8 pt-8 sm:mt-4 sm:pt-4 text-center text-fun-gray border-t border-fun-pink-dark">
-        <p className="flex flex-col items-center justify-center ">
-          <div className="inline-flex items-center uppercase text-xs font-bold tracking-widest">
+    </div>
+  );
+};
+
+function Footer() {
+  const { locale } = useRouter();
+  return (
+    <footer className="flex flex-col w-screen px-5 py-10 border-t border-fun-pink-darker z-5 bg-bg">
+      <div className="grid items-start justify-between w-full max-w-4xl grid-cols-2 m-auto sm:grid-cols-3">
+        {pages[locale].map((item, index) => (
+          <Column key={index} item={item} />
+        ))}
+        <Column item={social} />
+      </div>
+      <div className="w-full max-w-4xl pt-8 m-auto mt-8 text-center border-t sm:mt-4 sm:pt-4 text-fun-gray border-fun-pink-dark">
+        <div className="flex flex-col items-center justify-center ">
+          <div className="inline-flex items-center text-xs font-bold tracking-widest uppercase">
             Made with{" "}
-            <div className="space-x-2 inline-flex items-center -mt-1 ml-3">
+            <div className="inline-flex items-center ml-3 -mt-1 space-x-2">
               <span>
                 <img
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
@@ -113,17 +85,17 @@ function Footer() {
             Made by{" "}
             <a
               href="mailto:contact@braydentw.io"
-              className="text-fun-gray-light font-medium"
+              className="font-medium text-fun-gray-light"
             >
-              Brayden Wright
+              Omid Neshati
             </a>
             . All rights reserved.
           </div>
-        </p>
+        </div>
       </div>
       <div className="mt-8 text-center sm:text-right sm:-mt-12">
         <a
-          className="w-auto inline-flex items-center sm:w-auto font-bold flex-shrink text-xs border border-fun-pink px-4 py-2 rounded-xl text-fun-pink cursor-pointer opacity-50"
+          className="inline-flex items-center flex-shrink w-auto px-4 py-2 text-xs font-bold border opacity-50 cursor-pointer sm:w-auto border-fun-pink rounded-xl text-fun-pink"
           href="https://github.com/braydentw/braydentw.io"
           target="_blank"
           rel="nooreferrer"
