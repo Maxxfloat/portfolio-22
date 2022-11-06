@@ -15,8 +15,8 @@ const About = () => {
           dir={useDir()}
         >
           <h1 className="mb-5 text-6xl font-bold">{t("title")}</h1>
-          <div className="p-1 border border-blue-300 rounded-md">
-            <p className="p-1 text-xl leading-relaxed text-justify bg-[#072241] rounded-md">
+          <div className="p-1 border border-blue-300 rounded-md md:animate-moveOut">
+            <p className="p-1 text-xl leading-relaxed text-justify rounded-md bg-rich-black">
               {t("description")}
             </p>
           </div>
