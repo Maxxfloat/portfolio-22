@@ -5,12 +5,9 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <meta name="twitter:card" content="portfolio image" />
+          <meta name="twitter:card" content="summary" />
           <meta name="twitter:site" content="https://omidneshati.netlify.app" />
-          <meta
-            name="twitter:title"
-            content="Omid Neshati, web developer by react"
-          />
+          <meta name="twitter:title" content="Omid Neshati, react developer" />
           <meta
             name="twitter:description"
             content="junior web developer by react, next, typescript"
