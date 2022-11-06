@@ -5,24 +5,17 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="/static/favicon/apple-touch-icon.png"
+          <meta name="twitter:card" content="portfolio image" />
+          <meta name="twitter:site" content="https://omidneshati.netlify.app" />
+          <meta
+            name="twitter:title"
+            content="Omid Neshati, web developer by react"
           />
-          <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="/static/favicon/favicon-32x32.png"
+          <meta
+            name="twitter:description"
+            content="junior web developer by react, next, typescript"
           />
-          <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="/static/favicon/favicon-16x16.png"
-          />
-          <link rel="manifest" href="/static/favicon/site.webmanifest" />
+          <meta name="twitter:image" content="/static/portfolio.png" />
         </Head>
         <body>
           <Main />
