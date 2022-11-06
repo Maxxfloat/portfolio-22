@@ -26,7 +26,5 @@ function Page({ children }: PageProps) {
 export default Page;
 
 type PageProps = {
-  currentPage: string;
-  desc: string;
   children?: JSX.Element | JSX.Element[];
 };

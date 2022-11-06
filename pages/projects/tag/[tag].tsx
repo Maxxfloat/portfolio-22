@@ -8,6 +8,7 @@ import Projects from "components/projects/Projects";
 import Heading from "components/projects/Heading";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import MetaTags from "@/components/global/MetaTags";
 
 export const allTags = [];
 
@@ -65,10 +66,8 @@ function PostPage({ filteredProjects, tag }) {
   const t = useTranslations("homePage.projects");
   const capsTag = allTags[allKebabTags.indexOf(tag)];
   return (
-    <Page
-      currentPage="Projects"
-      desc={`A showcase for all of my ${capsTag} projects.`}
-    >
+    <Page>
+      <MetaTags pageTitle={t("meta.title")} pageDescription={t("meta.desc")} />
       <Heading tag={capsTag} />
       <Projects overwriteProjects={filteredProjects} />
 

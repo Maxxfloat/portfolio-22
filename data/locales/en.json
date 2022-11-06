@@ -1,7 +1,12 @@
 {
   "homePage": {
+    "meta": {
+      "title": "omid neshati - portfolio",
+      "desc": "omid neshati - web developer by react, next, typescript"
+    },
     "currentPage": "Home",
     "desc": "I'm a web developer who love to code",
+
     "hero": {
       "title": "Hi, I'm Omid",
       "description": {
@@ -19,6 +24,10 @@
     }
   },
   "projectsPage": {
+    "meta": {
+      "title": "omid neshati - projects",
+      "desc": "omid neshati - my favorite projects that built by technologies like react, next, typescript"
+    },
     "currentPage": "Projects",
     "desc": "I like coding using tools like React, NextJS, Tailwind, and many more! Here are some of my favorite projects.",
 
@@ -28,7 +37,7 @@
       "description": "I've built apps using anything HTML, CSS, JS, React, NextJS and more tools, some of my favorite projects"
     }
   },
-  "skillPage": {
+  "skill": {
     "title": "I got the experience",
     "subtitle": "Here is my toolbelt for success"
   },
@@ -36,6 +45,10 @@
     "sectionTitle": "The way I know myself"
   },
   "about": {
+    "meta": {
+      "title": "omid neshati - about me",
+      "desc": "omid neshati - short description about me and my motives"
+    },
     "title": "Me",
     "description": "web developer by React. I started coding in high school, and the first language I learned was c++, I chose the web because it is easy to use and accessible on every device. I see a bright future for web apps and want to be part of this future. Likewise, I started learning the required skills through online courses. After a few months of practice and several training projects, I worked with other developers (junior and senior) to get teamwork experience. Now I am looking to work remotely or locally with a creative and ethical team in the role of React Developer"
   }

@@ -57,7 +57,6 @@ function ProjectCard({ project }) {
         </p>
         <ul className={`flex flex-wrap items-center t-2 -ml-2 list-none`}>
           {project.tags.map((tag: string) => {
-            console.log("tag", tag);
             return (
               <li key={tag}>
                 <Link href={`/projects/tag/${kebabCase(tag)}`}>

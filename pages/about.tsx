@@ -1,3 +1,4 @@
+import MetaTags from "@/components/global/MetaTags";
 import Page from "@/components/utility/Page";
 import useDir from "hooks/useDir";
 import { useTranslations } from "next-intl";
@@ -8,7 +9,8 @@ const About = () => {
   const t = useTranslations("about");
 
   return (
-    <Page currentPage="Skills" desc="hello">
+    <Page>
+      <MetaTags pageTitle={t("meta.title")} pageDescription={t("meta.desc")} />
       <div className="flex justify-center pt-20">
         <div
           className="flex flex-col items-start p-2 border border-white rounded-md md:w-1/2 "
