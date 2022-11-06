@@ -25,7 +25,9 @@ module.exports = {
     },
     extend: {
       colors: {
-        bg: "#000a1f",
+        // bg: "#000a1f",
+        bg: "#001a1f",
+        "rich-black": "#000F12",
         "fun-gray-light": "#b2bbcf",
         "fun-gray": "#7b89a8",
         "fun-gray-medium": "#767c85",
@@ -46,9 +48,14 @@ module.exports = {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
+        move: {
+          "50%": { transform: "translate(50px)" },
+          "100%": { transform: "translate(50px,30px)" },
+        },
       },
       animation: {
         fadeInAndBounce: "fadeIn 3s ease-out",
+        moveOut: "move 2s 1s forwards ease-out",
       },
       willChange: {
         projectCard: "border-color, opacity, transform",
