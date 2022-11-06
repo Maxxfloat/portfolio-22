@@ -12,7 +12,10 @@ class MyDocument extends Document {
             name="twitter:description"
             content="junior web developer by react, next, typescript"
           />
-          <meta name="twitter:image" content="https://omidneshati.netlify.app/static/portfolio.png" />
+          <meta
+            name="twitter:image"
+            content="https://omidneshati.netlify.app/static/portfolio.png"
+          />
         </Head>
         <body>
           <Main />
