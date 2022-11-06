@@ -3,8 +3,9 @@ import Document, { Head, Html, Main, NextScript } from "next/document";
 class MyDocument extends Document {
   render() {
     return (
-      <Html lang="en">
+      <Html>
         <Head>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:site" content="@omid_neshati" />
           <meta name="twitter:title" content="Omid Neshati, react developer" />

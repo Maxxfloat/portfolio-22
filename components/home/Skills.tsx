@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 
 function Skills() {
   const { locale } = useRouter();
-  const t = useTranslations("skillPage");
+  const t = useTranslations("skill");
   return (
     <div
       className={`${

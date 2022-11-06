@@ -4,11 +4,13 @@ import Projects from "components/projects/Projects";
 import React from "react";
 import { GetStaticProps } from "next";
 import { useTranslations } from "next-intl";
+import MetaTags from "@/components/global/MetaTags";
 
 function projects() {
   const t = useTranslations("projectsPage");
   return (
-    <Page currentPage={t("currentPage")} desc={t("desc")}>
+    <Page>
+      <MetaTags pageTitle={t("meta.title")} pageDescription={t("meta.desc")} />
       <Heading />
       <Projects />
     </Page>
