@@ -5,8 +5,8 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <meta name="twitter:card" content="summary" />
-          <meta name="twitter:site" content="https://omidneshati.netlify.app" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:site" content="@omid_neshati" />
           <meta name="twitter:title" content="Omid Neshati, react developer" />
           <meta
             name="twitter:description"
@@ -16,6 +16,7 @@ class MyDocument extends Document {
             name="twitter:image"
             content="https://omidneshati.netlify.app/static/portfolio.png"
           />
+          <meta name="twitter:image:alt" content="omid neshati portfolio" />
         </Head>
         <body>
           <Main />
