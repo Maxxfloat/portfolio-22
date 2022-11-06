@@ -6,7 +6,7 @@ type MetaTagsType = { pageTitle: string; pageDescription: string };
 const MetaTags: FC<MetaTagsType> = ({ pageTitle, pageDescription }) => {
   return (
     <Head>
-      <meta name="title" content={pageTitle} />
+      <title>{pageTitle}</title>
       <meta name="description" content={pageDescription} />
     </Head>
   );
