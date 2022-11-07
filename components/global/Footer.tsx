@@ -54,27 +54,33 @@ function Footer() {
             Made with{" "}
             <div className="inline-flex items-center ml-3 -mt-1 space-x-2">
               <span>
-                <img
+                <Image
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
                   width="26"
+                  height="26"
                   title="React"
+                  alt="React"
                 />
                 <span className="sr-only">React</span>
               </span>
               <span>
-                <img
+                <Image
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg"
                   width="40"
+                  height="40"
                   className="invert"
                   title="NextJS"
+                  alt="NextJS"
                 />
                 <span className="sr-only">NextJS</span>
               </span>
               <span>
-                <img
+                <Image
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
                   width="26"
+                  height="26"
                   title="TailwindCSS"
+                  alt="TailwindCSS"
                 />
                 <span className="sr-only">TailwindCSS</span>
               </span>

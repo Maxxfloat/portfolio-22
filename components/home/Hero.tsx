@@ -1,8 +1,8 @@
-import { GetStaticProps } from "next";
 import { useTranslations } from "next-intl";
 import React from "react";
 import { Link as ScrollLink } from "react-scroll";
-
+import Image from "next/image";
+import { ImageProps } from "next/image";
 function Hero() {
   const t = useTranslations("homePage.hero");
 
@@ -19,49 +19,68 @@ function Hero() {
           {t("description.3")}{" "}
           <span className="heroShiny2 text-fun-pink">{t("description.4")}</span>{" "}
           {t("description.5")}{" "}
-          <img
-            className="sqD squiggle-hero-html w-16 top-[-90px] right-[5%] sm:top-[-90px] sm:right-[170px]"
+          <Image
+            className="sqD squiggle-hero-html top-[-90px] right-[0%] sm:top-[-90px] sm:right-[150px]"
             style={{ animationDelay: "0.1s" }}
             src="/static/doodles/hero/html.svg"
+            alt="html"
+            width={64}
+            height={64}
           />
-          <img
-            className="sqD squiggle-hero-nextjs hidden top-[75px] right-0 w-11"
+          <Image
+            className="sqD squiggle-hero-nextjs hidden top-[75px] right-0"
             style={{ animationDelay: "0.2s" }}
             src="/static/doodles/hero/nextjs.svg"
+            alt="nextjs"
+            width={44}
+            height={44}
           />
-          <img
-            className="sqD bottom-[-300px] -right-1/4 sm:right-[-20%] lg:bottom-[-310px] lg:right-[-120px] w-[400px]"
-            style={{ animationDelay: "0.3s" }}
-            src="/static/doodles/hero/brayden.svg"
-          />
-          <img
-            className="sqD hidden sm:block bottom-[-340px] left-[-180px]"
+          <Image
+            className="sqD hidden sm:block bottom-[-400px] left-[20px]"
             style={{ animationDelay: "0.4s" }}
             src="/static/doodles/hero/coder.svg"
+            alt="coder"
+            width={300}
+            height={300}
           />
-          <img
-            className="sqD hidden sm:block left-[100px] lg:left-[160px] bottom-[-150px]"
+          <Image
+            className="sqD hidden sm:block left-[140px] lg:left-[160px] bottom-[-180px]"
             style={{ animationDelay: "0.5s" }}
             src="/static/doodles/hero/js.svg"
+            alt="js"
+            width={80}
+            height={80}
           />
-          <img
-            className="sqD bottom-[-320px] right-[65%] sm:right-[45%]"
+          <Image
+            className="sqD bottom-[-320px] right-[50%] sm:right-[10%]"
             style={{ animationDelay: "0.6s" }}
             src="/static/doodles/hero/dino.svg"
+            alt="dino"
+            width={200}
+            height={200}
           />
-          <img
-            className="sqD right-[-60px] sm:right-0 bottom-[-180px] lg:[5%]"
+          <Image
+            className="sqD right-0 bottom-[-180px] lg:[5%]"
             style={{ animationDelay: "0.7s" }}
             src="/static/doodles/hero/paintbrush.svg"
+            alt="paintbrush"
+            width={120}
+            height={120}
           />
-          <img
+          <Image
             className="sqD squiggle-hero-pop1 hidden sm:block sm:top-[-130px] sm:left-[15%] lg:top-[-130px] lg:left-[120px]"
             src="/static/doodles/hero/pop1.svg"
+            alt="pop1"
+            width={80}
+            height={80}
           />
-          <img
-            className="sqD left-[-35px] bottom-[-85px] sm:bottom-[-100px] sm:left-5 opacity-40"
+          <Image
+            className="sqD left-[0px] bottom-[-85px] sm:bottom-[-100px] sm:left-5 opacity-40"
             style={{ animationDelay: "0.9s" }}
             src="/static/doodles/hero/code.svg"
+            alt="code"
+            width={190}
+            height={190}
           />
         </h1>
         <ScrollLink

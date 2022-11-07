@@ -1,14 +1,13 @@
 import useDir from "hooks/useDir";
 import { useTranslations } from "next-intl";
-import { useRouter } from "next/router";
 import React from "react";
+import Image from "next/image";
 
 type HeadingProps = {
   tag?: string;
 };
 
 function Heading({ tag }: HeadingProps) {
-  const { locale } = useRouter();
   const t = useTranslations("projectsPage");
   return (
     <div
@@ -23,18 +22,24 @@ function Heading({ tag }: HeadingProps) {
             dir={useDir()}
           >
             {t("heading.title")} <b>{tag}</b>
-            <img
-              className="absolute w-8 sqD sm:w-10 -top-6 -right-2 sm:-right-8 sm:-top-8"
+            <Image
+              className="absolute -top-6 -right-2 sm:-right-8 sm:-top-8"
               src="/static/doodles/hero/code.svg"
+              alt="code"
+              width={32}
+              height={32}
             />
           </h1>
         </>
       ) : (
         <h1 className="relative inline-block w-auto mx-auto mb-8 text-4xl sm:text-6xl">
           {t("heading.noTitle")}
-          <img
+          <Image
             className="absolute w-10 sqD -top-8 -right-8"
             src="/static/doodles/hero/code.svg"
+            alt="code"
+            width={40}
+            height={40}
           />
         </h1>
       )}
