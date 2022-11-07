@@ -16,7 +16,7 @@ function SectionTitle({ title }: SectionTitleProps) {
             : "md:flex-row md:text-left"
         } flex items-center text-center justify-center h-24 gap-8`}
       >
-        <span className="text-3xl font-bold whitespace-nowrap">{title}</span>
+        <span className="text-3xl font-bold md:whitespace-nowrap">{title}</span>
         <div className="hidden w-full h-2 bg-[#00ffff] -z-10 md:block" />
       </div>
     </div>
