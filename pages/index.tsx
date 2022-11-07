@@ -1,4 +1,3 @@
-import CTA from "@/components/home/CTA";
 import Hero from "@/components/home/Hero";
 import Page from "@/components/utility/Page";
 import Projects from "@/components/home/Projects";
@@ -13,9 +12,6 @@ export default function Home() {
   return (
     <Page>
       <MetaTags pageTitle={t("meta.title")} pageDescription={t("meta.desc")} />
-      {/* <Head>
-        <meta name="title" content="WTF ???" />
-      </Head> */}
       <Hero />
       <div className="mt-20 space-y-32">
         <Projects />
