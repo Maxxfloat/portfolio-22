@@ -101,7 +101,7 @@ function Footer() {
       <div className="mt-8 text-center sm:text-right sm:-mt-12">
         <a
           className="inline-flex items-center flex-shrink w-auto px-4 py-2 text-xs font-bold border opacity-50 cursor-pointer sm:w-auto border-fun-pink rounded-xl text-fun-pink"
-          href="https://github.com/braydentw/braydentw.io"
+          href="https://github.com/Maxxfloat/portfolio-22"
           target="_blank"
           rel="nooreferrer"
         >
