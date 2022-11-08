@@ -21,6 +21,7 @@ class MyDocument extends Document {
           <meta property="og:url" content="https://omidneshati.netlify.app" />
           <meta property="og:image" content={img} />
           <meta property="og:description" content={desc} />
+          <meta property="og:type" content="website" />
         </Head>
         <body>
           <Main />
