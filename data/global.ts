@@ -64,7 +64,7 @@ export const social: Column = {
   links: [
     {
       name: "GitHub",
-      link: "https://github.com/Maxxfloat",
+      link: "https://github.com/omidneshati",
       icon: "/static/icons/github-f.svg",
       leavesWebsite: true,
     },
