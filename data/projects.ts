@@ -15,18 +15,6 @@ const projects: Project[] = [
   },
   {
     id: 1,
-    title: { en: "Admin-Dashboard", fa: "داشبورد مدیر" },
-    desc: {
-      en: "Admin dashboard includes multi simple and complicated apps. Made by Nextjs, Typescript, and TailwindCSS",
-      fa: "داشبورد مدیر شامل تعدادی برنامه ساده و پیچیده است. ساخته شده با Nextjs, Typescript, and TailwindCSS",
-    },
-    img: "/static/projects/admin-dashboard-2.png",
-    tags: ["react", "next", "typescript", "tailwindcss"],
-    github: "https://github.com/Maxxfloat/admin_dashboard",
-    link: "https://nextjs-admin-dashboard.netlify.app",
-  },
-  {
-    id: 2,
     title: { en: "Cryptocurrency Tracker", fa: "ردیاب رمز ارز" },
     desc: {
       en: "The technology used includes Nextjs, Tailwindcss, and Typescript. That gets data from third-party API",
@@ -38,7 +26,7 @@ const projects: Project[] = [
     link: "https://maxxfloatcryptotracker.netlify.app",
   },
   {
-    id: 3,
+    id: 2,
     title: { en: "QR-Code", fa: "کیو آر کد" },
     desc: { en: "QR-Code generator", fa: "تولید کننده کیو آر کد" },
     img: "/static/projects/qr-code.png",
