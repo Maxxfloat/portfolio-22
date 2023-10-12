@@ -43,8 +43,8 @@ const projects: Project[] = [
     },
     img: "/static/projects/ma-commerce.png",
     tags: ["next", "react", "tailwindcss", "ecommerce", "typescript"],
-    github: "https://github.com/omidneshati/maxxfloat.github.io",
-    link: "https://maxxfloat.github.io",
+    github: "https://github.com/omidneshati/ma-ecommerce",
+    link: "https://ma-ecommerce.netlify.app",
   },
 ];
 
