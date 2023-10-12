@@ -9,9 +9,9 @@ const projects: Project[] = [
       fa: "بازی حافظه که با Nextjs, Tailwindcss, و Typescript شامل فهرست تنظیم نوع‌ کارت‌ها، تعداد کارت‌ها و تعداد همسان",
     },
     link: "https://find-the-pair.netlify.app",
-    img: "/static/projects/find-the-pair.gif",
-    github: "https://github.com/Maxxfloat/find-the-pairs",
-    tags: ["react", "next", "tailwindcss", "typescript"],
+    img: "/static/projects/find-the-pair.png",
+    github: "https://github.com/omidneshati/find-the-pairs",
+    tags: ["react", "next", "tailwindcss", "typescript", "game"],
   },
   {
     id: 1,
@@ -22,7 +22,7 @@ const projects: Project[] = [
     },
     img: "/static/projects/cryptocurrency-tracker.png",
     tags: ["typescript", "next", "react", "tailwindcss"],
-    github: "https://github.com/Maxxfloat/cryptocurrency-price-tracker",
+    github: "https://github.com/omidneshati/cryptocurrency-price-tracker",
     link: "https://maxxfloatcryptotracker.netlify.app",
   },
   {
@@ -30,9 +30,21 @@ const projects: Project[] = [
     title: { en: "QR-Code", fa: "کیو آر کد" },
     desc: { en: "QR-Code generator", fa: "تولید کننده کیو آر کد" },
     img: "/static/projects/qr-code.png",
-    tags: ["next", "react", "tailwindcss"],
-    github: "https://github.com/Maxxfloat/qr-code-generator",
+    tags: ["next", "react", "tailwindcss", "REST API"],
+    github: "https://github.com/omidneshati/qr-code-generator",
     link: "https://maxxfloatqrcode.netlify.app",
+  },
+  {
+    id: 3,
+    title: { en: "ma-commerce", fa: "ماکامرس" },
+    desc: {
+      en: "eccomerce website made by Nextjs, Tailwindcss, and Typescript",
+      fa: "یک وبسایت فروشگاهی با Nextjs, Tailwindcss و Typescript",
+    },
+    img: "/static/projects/ma-commerce.png",
+    tags: ["next", "react", "tailwindcss", "ecommerce", "typescript"],
+    github: "https://github.com/omidneshati/maxxfloat.github.io",
+    link: "https://maxxfloat.github.io",
   },
 ];
 
