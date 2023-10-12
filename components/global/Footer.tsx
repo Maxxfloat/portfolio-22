@@ -18,8 +18,7 @@ const Column: FC<{ item: ColumnType }> = ({ item }) => {
                 <a
                   href={item.link}
                   target="_blank"
-                  className="flex items-center"
-                >
+                  className="flex items-center">
                   {item.icon && (
                     <span className="pr-2 -mb-1">
                       <Image src={item.icon} alt="" width={20} height={20} />
@@ -90,8 +89,7 @@ function Footer() {
             Made by{" "}
             <a
               href="mailto:contact@braydentw.io"
-              className="font-medium text-fun-gray-light"
-            >
+              className="font-medium text-fun-gray-light">
               Omid Neshati
             </a>
             . All rights reserved.
@@ -101,10 +99,9 @@ function Footer() {
       <div className="mt-8 text-center sm:text-right sm:-mt-12">
         <a
           className="inline-flex items-center flex-shrink w-auto px-4 py-2 text-xs font-bold border opacity-50 cursor-pointer sm:w-auto border-fun-pink rounded-xl text-fun-pink"
-          href="https://github.com/Maxxfloat/portfolio-22"
+          href="https://github.com/omidneshati/portfolio-22"
           target="_blank"
-          rel="nooreferrer"
-        >
+          rel="nooreferrer">
           <Image
             src="/static/icons/github.svg"
             width={16}
