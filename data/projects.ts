@@ -9,7 +9,7 @@ const projects: Project[] = [
       fa: "بازی حافظه که با Nextjs, Tailwindcss, و Typescript شامل فهرست تنظیم نوع‌ کارت‌ها، تعداد کارت‌ها و تعداد همسان",
     },
     link: "https://find-the-pair.netlify.app",
-    img: "/static/projects/find-the-pair.png",
+    img: "/static/projects/find-the-pairs.png",
     github: "https://github.com/omidneshati/find-the-pairs",
     tags: ["react", "next", "tailwindcss", "typescript", "game"],
   },
